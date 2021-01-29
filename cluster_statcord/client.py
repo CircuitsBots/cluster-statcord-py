@@ -202,7 +202,8 @@ class Client:
 
     async def __loop(self):
         """
-        The internal loop used for automatically posting server/guild count stats
+        The internal loop used for automatically posting server/guild
+        count stats
         """
         await self.bot.wait_until_ready()
         if self.debug:
@@ -216,5 +217,6 @@ class Client:
 
     async def on_error(self, error):
         print(
-            f"Statcord posting exception occured: {error.__class__.__qualname__} - {error}"
+            "Statcord posting exception occured: "
+            f"{error.__class__.__qualname__} - {error}"
         )

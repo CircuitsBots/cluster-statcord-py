@@ -96,8 +96,6 @@ class Client:
         else:
             raise exceptions.RequestFailure(status=status, response=msg)
 
-        return msg
-
     @property
     def servers(self):
         return str(len(self.bot.guilds))

@@ -9,6 +9,6 @@ class RequestFailure(StatcordException):
 
 
 class TooManyRequests(RequestFailure):
-    def __init__(self, status: int, response: str, wait:int):
+    def __init__(self, status: int, response: str, wait: int):
         self.wait = wait
         super().__init__("{}: {}".format(status, response))

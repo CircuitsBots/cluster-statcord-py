@@ -23,7 +23,7 @@ class Client:
 
         self.bot = bot
         self.key = token
-        self.base = "https://statcord.com/logan/"
+        self.base = "https://api.statcord.com/v3"
         self.session = aiohttp.ClientSession(loop=bot.loop)
 
         if kwargs.get("mem"):
@@ -173,7 +173,7 @@ class Client:
         self.popular = []
 
         async with self.session.post(
-            url=self.base + "stats", json=data, headers=self.__headers()
+            url=self.base + "clusters", json=data, headers=self.__headers()
         ) as resp:
             res = await self.__handle_response(resp)
             if self.debug:

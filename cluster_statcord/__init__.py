@@ -1,10 +1,9 @@
-__title__ = "statcord.py"
-__author__ = "statcord.com"
+__title__ = "cluster-statcord-py"
+__author__ = "CircuitSacul"
 __license__ = "MIT"
-__copyright__ = "Copyright 2020, statcord.com"
-__version__ = "3.0.7"
+__version__ = "1.0.1"
 
-name = "statcord"
+name = "cluster_statcord"
 
 from collections import namedtuple
 from .client import Client

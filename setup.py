@@ -1,6 +1,6 @@
 from setuptools import setup
 
-from statcord import __title__, __author__, __version__
+from cluster_statcord import __title__, __author__, __version__
 
 if not __title__:
     raise RuntimeError("title is not set")
@@ -18,7 +18,7 @@ with open("README.md", "r") as f:
 setup(
     name=__title__,
     author=__author__,
-    url="https://github.com/labdiscord/statcord.py/",
+    url="https://github.com/CircuitsBots/cluster-statcord-py",
     version=__version__,
     packages=["statcord"],
     python_requires=">= 3.5",
@@ -27,7 +27,7 @@ setup(
     description="A simple API wrapper for statcord.com to connect your bot and get your bot stats.",
     long_description=readme,
     long_description_content_type="text/markdown",
-    keywords="statcord stat cord discordlabs discord labs bots statistics stats",
+    keywords="cluster statcord stat cord discordlabs discord labs bots statistics stats",
     classifiers=(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",

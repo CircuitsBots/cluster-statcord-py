@@ -1,13 +1,12 @@
+from collections import namedtuple
+
+
 __title__ = "cluster-statcord-py"
 __author__ = "CircuitSacul"
 __license__ = "MIT"
 __version__ = "1.0.1"
 
 name = "cluster_statcord"
-
-from collections import namedtuple
-from .client import Client
-from .exceptions import *
 
 VersionInfo = namedtuple(
     "VersionInfo", "major minor micro releaselevel serial"

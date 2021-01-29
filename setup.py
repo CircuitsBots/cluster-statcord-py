@@ -24,10 +24,16 @@ setup(
     python_requires=">= 3.5",
     include_package_data=True,
     install_requires=requirements,
-    description="A simple API wrapper for statcord.com to connect your bot and get your bot stats.",
+    description=(
+        "A simple API wrapper for statcord.com to "
+        "connect your bot and get your bot stats."
+    ),
     long_description=readme,
     long_description_content_type="text/markdown",
-    keywords="cluster statcord stat cord discordlabs discord labs bots statistics stats",
+    keywords=(
+        "cluster statcord stat cord discordlabs "
+        "discord labs bots statistics stats"
+    ),
     classifiers=(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",

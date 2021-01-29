@@ -9,7 +9,7 @@ import contextlib
 class Client:
     """Client for using the statcord API"""
 
-    def __init__(self, bot, token, **kwargs):
+    def __init__(self, bot, token, cluster_id, **kwargs):
         if not isinstance(bot, DiscordClient):
             raise TypeError(
                 "Expected class deriving from discord.Client "
@@ -23,6 +23,7 @@ class Client:
 
         self.bot = bot
         self.key = token
+        self.cluster_id = cluster_id
         self.base = "https://api.statcord.com/v3/"
         self.session = aiohttp.ClientSession(loop=bot.loop)
 
@@ -162,6 +163,7 @@ class Client:
             "memload": memload,
             "cpuload": cpuload,
             "bandwidth": bandwidth,
+            "cluster_id": self.cluster_id,
             "custom1": custom1,
             "custom2": custom2,
         }

@@ -23,7 +23,7 @@ class Client:
 
         self.bot = bot
         self.key = token
-        self.base = "https://api.statcord.com/v3"
+        self.base = "https://api.statcord.com/v3/"
         self.session = aiohttp.ClientSession(loop=bot.loop)
 
         if kwargs.get("mem"):

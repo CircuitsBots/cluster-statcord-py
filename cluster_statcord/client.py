@@ -12,11 +12,13 @@ class Client:
     def __init__(self, bot, token, **kwargs):
         if not isinstance(bot, DiscordClient):
             raise TypeError(
-                f"Expected class deriving from discord.Client for arg bot not {bot.__class__.__qualname__}"
+                "Expected class deriving from discord.Client "
+                f"for arg bot not {bot.__class__.__qualname__}"
             )
         if not isinstance(token, str):
             raise TypeError(
-                f"Expected str for arg token not {token.__class__.__qualname__}"
+                "Expected str for arg token not "
+                f"{token.__class__.__qualname__}"
             )
 
         self.bot = bot
@@ -29,7 +31,8 @@ class Client:
                 self.mem = kwargs["mem"]
             else:
                 raise TypeError(
-                    f"Memory config : expected type bool not {kwargs['mem'].__class__.__qualname__}"
+                    "Memory config : expected type bool not "
+                    f"{kwargs['mem'].__class__.__qualname__}"
                 )
         else:
             self.mem = True
@@ -39,7 +42,8 @@ class Client:
                 self.cpu = kwargs["cpu"]
             else:
                 raise TypeError(
-                    f"CPU config : expected type bool not {kwargs['cpu'].__class__.__qualname__}"
+                    f"CPU config : expected type bool not "
+                    f"{kwargs['cpu'].__class__.__qualname__}"
                 )
         else:
             self.cpu = True
@@ -57,7 +61,8 @@ class Client:
                 self.debug = kwargs["debug"]
             else:
                 raise TypeError(
-                    f"Debug config : expected type bool not {kwargs['debug'].__class__.__qualname__}"
+                    "Debug config : expected type bool not "
+                    f"{kwargs['debug'].__class__.__qualname__}"
                 )
         else:
             self.debug = False

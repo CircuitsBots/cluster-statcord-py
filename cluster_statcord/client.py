@@ -68,8 +68,6 @@ class Client:
         else:
             self.debug = False
 
-        self.custom1 = kwargs.get("custom1") or False
-        self.custom2 = kwargs.get("custom2") or False
         self.active = []
         self.commands = 0
         self.popular = []
@@ -141,16 +139,6 @@ class Client:
         else:
             bandwidth = "0"
 
-        if self.custom1:
-            custom1 = str(await self.custom1())
-        else:
-            custom1 = "0"
-
-        if self.custom2:
-            custom2 = str(await self.custom2())
-        else:
-            custom2 = "0"
-
         data = {
             "id": id,
             "key": self.key,
@@ -163,9 +151,7 @@ class Client:
             "memload": memload,
             "cpuload": cpuload,
             "bandwidth": bandwidth,
-            "cluster_id": self.cluster_id,
-            "custom1": custom1,
-            "custom2": custom2,
+            "cluster_id": self.cluster_id
         }
         if self.debug:
             print("Posting data")
